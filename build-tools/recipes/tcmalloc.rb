@@ -17,9 +17,16 @@
 # limitations under the License.
 #
 
+directory "/var/chef/package-cache/" do
+  owner "root"
+  group "root"
+  mode "0755"
+  action :create
+end
+
 cookbook_file "/var/chef/package-cache/libgoogle-perftools0_1.7-1_i386.deb" do
   only_if node[:kernel][:machine] =~ /i386/
-  source  "build-tools/libgoogle-perftools0_1.7-1_i386.deb"
+  source  "libgoogle-perftools0_1.7-1_i386.deb"
   owner   "root"
   group   "root"
   mode    "0444"
@@ -27,7 +34,7 @@ end
 
 cookbook_file "/var/chef/package-cache/libgoogle-perftools-dev_1.7-1_i386.deb" do
   only_if node[:kernel][:machine] =~ /i386/
-  source  "build-tools/libgoogle-perftools-dev_1.7-1_i386.deb"
+  source  "libgoogle-perftools-dev_1.7-1_i386.deb"
   owner   "root"
   group   "root"
   mode    "0444"
