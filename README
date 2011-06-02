@@ -1,0 +1,21 @@
+PipelineDeals, LLC Cookbooks for Chef
+
+This repository is PipelineDeals's published, public cookbooks for Chef.
+
+These cookbooks are distributed under the Apache 2 Software License. See
+LICENSE.
+
+== LINKS:
+
+Source:
+
+* http://github.com/pipelinedeals/cookbooks
+
+Chef Documentation:
+
+* http://wiki.opscode.com/display/chef/Home/
+* http://help.opscode.com
+
+Opscode Cookbook Community Site:
+
+* http://cookbooks.opscode.com/
