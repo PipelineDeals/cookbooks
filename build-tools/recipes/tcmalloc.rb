@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: build-tools
-# Recipe:: google-perftools
+# Recipe:: tcmalloc
 #
 # Copyright 2011, PipelineDeals, LLC.
 #
