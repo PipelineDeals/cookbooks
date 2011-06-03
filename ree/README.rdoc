@@ -1,0 +1,55 @@
+= DESCRIPTION:
+
+Installs Ruby Enterprise Edition (REE) from Phusion.
+
+= REQUIREMENTS:
+
+== Cookbooks
+
+* build-tools
+
+== Platform
+
+Tested on Ubuntu 10.04.
+
+= ATTRIBUTES:
+
+* ree[:install_path] - Location to install REE. Default /opt/ree
+* ree[:version] - Version-datestamp to use. Default 1.8.7-2011.03
+* ree[:url] - URL to download. Default is Google Code.
+* ree[:malloc] - Either "tcmalloc" to use Google's Thread-Caching Malloc or "malloc" to use the standard malloc on your systems (usually provided by glibc).
+
+= USAGE:
+
+Include the ree recipe to install Ruby Enterprise Edition.
+
+  include_recipe "ree"
+
+Or add it to your role, or directly to a node's recipes.
+
+Install RubyGems under REE with the ree_gem definition.
+
+  ree_gem "rails" do
+    source  "http://gems.rubyforge.org"
+    version "2.3.11"
+  end
+
+The definitions supports two parameters, source and version. Both are optional.
+
+= LICENSE AND AUTHOR:
+
+Author:: Michael Pellon (<michael@pipelinedealsco.com>)
+
+Copyright 2011, PipelineDeals, LLC.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
