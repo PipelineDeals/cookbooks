@@ -1,0 +1,7 @@
+maintainer        "PipelineDeals, LLC."
+maintainer_email  "cookbooks@pipelinedealsco.com"
+license           "Apache 2.0"
+description       "Tunes Ubuntu for a high performance environment (i.e. web server, database, etc)."
+version           "0.1.0"
+recipe            "ubuntu:apparmor", "Stops and disables the apparmor service on Ubuntu."
+supports          "ubuntu"
