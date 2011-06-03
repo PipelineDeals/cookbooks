@@ -14,10 +14,20 @@ Tested on Ubuntu 10.04.
 RECIPES
 =======
 
+default
+-------
+
+Executes all cookbooks.
+
 apparmor
 --------
 
 Stops and disables the apparmor service on Ubuntu.
+
+security
+--------
+
+Hardens a stock Ubuntu installation.
 
 LICENSE AND AUTHOR
 ==================

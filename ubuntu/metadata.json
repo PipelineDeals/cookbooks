@@ -13,11 +13,13 @@
   },
   "maintainer": "PipelineDeals, LLC.",
   "long_description": "",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "recommendations": {
   },
   "recipes": {
-    "ubuntu:apparmor": "Stops and disables the apparmor service on Ubuntu."
+    "ubuntu::security": "Hardens a stock Ubuntu installation.",
+    "ubuntu::default": "Executes all cookbooks.",
+    "ubuntu::apparmor": "Stops and disables the apparmor service on Ubuntu."
   },
   "groupings": {
   },
@@ -25,7 +27,7 @@
   },
   "replacing": {
   },
-  "description": "Tunes Ubuntu for a high performance environment (i.e. web server, database, etc).",
+  "description": "Tunes Ubuntu for a secure high performance environment (i.e. web server, database, etc).",
   "providing": {
   }
 }
