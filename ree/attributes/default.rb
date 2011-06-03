@@ -25,3 +25,13 @@ default[:ree][:ruby_bin]      = "/opt/ree/bin/ruby"
 default[:ree][:gems_dir]      = "#{ree[:install_path]}/lib/ruby/gems/1.8"
 default[:ree][:version]       = '1.8.7-2011.03'
 default[:ree][:url]           = "http://rubyenterpriseedition.googlecode.com/files/ruby-enterprise-#{ree[:version]}.tar.gz"
+
+# GC settings
+
+default[:ree][:gc]                            = Mash.new
+default[:ree][:gc][:heap_min_slots]           = 500000
+default[:ree][:gc][:heap_slots_increment]     = 250000
+default[:ree][:gc][:heap_slots_growth_factor] = 1
+default[:ree][:gc][:malloc_limit]             = 50000000
+default[:ree][:gc][:heap_free_min]            = 4096
+default[:ree][:gc][:enabled]                  = true

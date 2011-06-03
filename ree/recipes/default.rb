@@ -60,3 +60,16 @@ bash "Compile Ruby Enterprise Edition" do
   end
 end
 
+case node[:ree][:gc][:enabled]
+when "true" then
+  template "#{node[:ree][:install_path]}/bin/ruby_with_gc" do
+    source  "ruby_with_gc.erb"
+    owner   "root"
+    group   "root"
+    mode    "755"
+  end
+  code <<-EOH
+    rm -rf /usr/bin/ruby
+    ln -s #{node[:ree][:install_path]}/bin/ruby_with_gc /usr/bin/ruby
+  EOH
+end
