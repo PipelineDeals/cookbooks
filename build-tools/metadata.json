@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+  },
+  "name": "build-tools",
+  "maintainer_email": "cookbooks@pipelinedealsco.com",
+  "attributes": {
+  },
+  "license": "Apache 2.0",
+  "suggestions": {
+  },
+  "platforms": {
+    "debian": ">= 0.0.0",
+    "ubuntu": ">= 0.0.0"
+  },
+  "maintainer": "PipelineDeals, LLC.",
+  "long_description": "",
+  "version": "0.1.0",
+  "recommendations": {
+  },
+  "recipes": {
+    "build-tools": "Installs the basics - gcc, bison, autoconf, make, libc, etc.",
+    "build-tools::tcmalloc": "Installs Google's fast multi-threaded mallac()."
+  },
+  "groupings": {
+  },
+  "conflicting": {
+  },
+  "replacing": {
+  },
+  "description": "Packages essential tools for building common C/C++ based software.",
+  "providing": {
+  }
+}
