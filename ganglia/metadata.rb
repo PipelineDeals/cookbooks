@@ -1,0 +1,6 @@
+maintainer        "PipelineDeals, LLC."
+maintainer_email  "cookbooks@pipelinedealsco.com"
+license           "Apache 2.0"
+description       "Installs and configures Ganglia."
+version           "0.1.0"
+supports          "ubuntu"

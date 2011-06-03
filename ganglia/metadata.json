@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+  },
+  "name": "ganglia",
+  "maintainer_email": "cookbooks@pipelinedealsco.com",
+  "attributes": {
+  },
+  "license": "Apache 2.0",
+  "suggestions": {
+  },
+  "platforms": {
+    "ubuntu": ">= 0.0.0"
+  },
+  "maintainer": "PipelineDeals, LLC.",
+  "long_description": "",
+  "version": "0.1.0",
+  "recommendations": {
+  },
+  "recipes": {
+  },
+  "groupings": {
+  },
+  "conflicting": {
+  },
+  "replacing": {
+  },
+  "description": "Installs and configures Ganglia.",
+  "providing": {
+  }
+}
