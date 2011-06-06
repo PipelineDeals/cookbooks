@@ -19,20 +19,25 @@
 
 package "binutils-doc" do
   action :install
+  options "--force-yes"
 end
 
 package "build-essential" do
   action :install
+  options "--force-yes"
 end
 
 package "autoconf" do
   action :install
+  options "--force-yes"
 end
 
 package "flex" do
   action :install
+  options "--force-yes"
 end
 
 package "bison" do
   action :install
+  options "--force-yes"
 end
