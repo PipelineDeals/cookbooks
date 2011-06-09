@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: ubuntu
+# Cookbook Name:: os
 # Recipe:: default
 #
 # Copyright 2011, PipelineDeals, LLC.
@@ -19,8 +19,10 @@
 
 case node[:platform]
 when "ubuntu"
-
-  include_recipe "ubuntu::apparmor"
-  include_recipe "ubuntu::security"
-
+  include_recipe "os::apparmor"
+  include_recipe "os::security"
+  include_recipe "os::sysctl"
+when "debian"
+  include_recipe "os::security"
+  include_recipe "os::sysctl"
 end

@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: ubuntu
+# Cookbook Name:: os
 # Recipe:: security
 #
 # Copyright 2011, PipelineDeals, LLC.
@@ -32,13 +32,6 @@ end
 execute "Disable X11 forwarding" do
   command "sed --in-place \"s/X11Forwarding yes/X11Forwarding no/g\" /etc/ssh/sshd_config"
   only_if "grep \"X11Forwarding yes\" /etc/ssh/sshd_config"
-  notifies :reload, resources(:service => "sshd")
-  action :run
-end
-
-execute "Disable root login via ssh" do
-  command "sed --in-place \"s/PermitRootLogin yes/PermitRootLogin no/g\" /etc/ssh/sshd_config"
-  only_if "grep \"PermitRootLogin yes\" /etc/ssh/sshd_config"
   notifies :reload, resources(:service => "sshd")
   action :run
 end

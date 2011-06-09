@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: ubuntu
+# Cookbook Name:: os
 # Recipe:: apparmor
 #
 # Copyright 2011, PipelineDeals, LLC.

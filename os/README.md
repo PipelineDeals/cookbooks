@@ -1,7 +1,7 @@
 DESCRIPTION
 ===========
 
-Tunes Ubuntu for a high performance environment (i.e. web server, database, etc).
+Tunes Debian/Ubuntu for a secure high performance environment (i.e. web server, database, etc).
 
 REQUIREMENTS
 ============
@@ -9,7 +9,7 @@ REQUIREMENTS
 Platform
 --------
 
-Tested on Ubuntu 10.04.
+Tested on Ubuntu 10.04 and Debian 6.0.
 
 RECIPES
 =======
@@ -27,7 +27,13 @@ Stops and disables the apparmor service on Ubuntu.
 security
 --------
 
-Hardens a stock Ubuntu installation.
+Hardens a stock Debian/Ubuntu installation.
+
+sysctl
+------
+
+Configures sysctl parameters.
+
 
 LICENSE AND AUTHOR
 ==================
