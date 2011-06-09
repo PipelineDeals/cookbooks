@@ -23,7 +23,10 @@ include_recipe "build-tools"
 include_recipe "build-tools::tcmalloc"
 
 %w{ libssl-dev libreadline5-dev }.each do |pkg|
-  package pkg
+  package pkg do
+    action :install
+    options "--force-yes"
+  end
 end
 
 remote_file "#{Chef::Config[:file_cache_path]}/ruby-enterprise-#{node[:ree][:version]}.tar.gz" do

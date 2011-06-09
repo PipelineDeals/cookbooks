@@ -22,8 +22,11 @@
 include_recipe "build-tools"
 include_recipe "build-tools::tcmalloc"
 
-%w{ zlib1g zlib1g-dev libssl-dev libreadline5 libreadline5-dev libxml2 libxml2-dev libxslt-dev openssl }.each do |pkg|
-  package pkg
+%w{ zlib1g zlib1g-dev libssl-dev libreadline5 libreadline5-dev libxml2 libxml2-dev openssl }.each do |pkg|
+  package pkg do
+    action :install
+    options "--force-yes"
+  end
 end
 
 remote_file "#{Chef::Config[:file_cache_path]}/twitter-rubyenterpriseedition187-248-kiji_#{node[:kiji][:version]}-0-g#{node[:kiji][:sha]}.tar" do
@@ -35,11 +38,12 @@ bash "Compile Ruby Enterprise Edition - Kiji Branch" do
   cwd Chef::Config[:file_cache_path]
   code <<-EOH
   tar zxf twitter-rubyenterpriseedition187-248-kiji_#{node[:kiji][:version]}-0-g#{node[:kiji][:sha]}.tar
-  cd twitter-rubyenterpriseedition187-248-#{node[:kiji][:sha]}
+  cd twitter-rubyenterpriseedition187-248-64bf179
   autoconf
   export CFLAGS='-O2 -g -Wall -fPIC -fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free -fno-stack-protector'
   export LIBS='-ltcmalloc_minimal'
-  ./configure --disable-pthread --disable-shared --disable-ucontext
+  PREFIX=#{node[:kiji][:install_path]}
+  ./configure --enable-gc-debug --prefix=$PREFIX --disable-pthread --disable-shared --disable-ucontext
   make -j3
   make install
   rm -rf /usr/bin/ruby
